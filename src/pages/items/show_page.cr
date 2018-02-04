@@ -9,6 +9,10 @@ class Items::ShowPage < MainLayout
     end
 
     para do
+      link "Delete item", to: Items::Delete.route(@item)
+    end
+
+    para do
       link "All items", to: Items::Index
     end
   end
