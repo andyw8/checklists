@@ -1,6 +1,6 @@
 # checklists
 
-This is a project written using [Lucky](https://luckyframework.org). Enjoy!
+This is a basic CRUD example app written using [Lucky](https://luckyframework.org).
 
 ### Setting up the project
 
