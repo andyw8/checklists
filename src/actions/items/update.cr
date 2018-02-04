@@ -7,7 +7,6 @@ class Items::Update < BrowserAction
         flash.success = "The item was updated"
         redirect to: Items::Index
       else
-        text "failed to update"
         flash.danger = "The item was not updated"
         render EditPage, item_form: form, item: item
       end
