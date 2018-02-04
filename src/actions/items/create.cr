@@ -1,10 +1,11 @@
 class Items::Create < BrowserAction
   action do
     ItemForm.create(params) do |form, item|
-      if item # the item was saved
+      if item
+        flash.success = "The item was created"
         redirect to: Items::Index
-      else # the item was not saved
-        text "fail"
+      else
+        flash.danger = "The item was not created"
         render NewPage, item_form: form
       end
     end
