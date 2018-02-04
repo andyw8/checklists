@@ -3,7 +3,7 @@ class Items::Update < BrowserAction
     item = ItemQuery.new.find(id)
 
     ItemForm.update(item, params) do |form, item|
-      if item
+      if form.save_succeeded?
         flash.success = "The item was updated"
         redirect to: Items::Index
       else
