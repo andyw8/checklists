@@ -25,6 +25,10 @@ abstract class MainLayout
       body do
         render_flash
         inner
+
+        div do
+          link "Home", to: Items::Index
+        end
       end
     end
   end
