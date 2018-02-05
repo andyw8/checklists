@@ -1,5 +1,9 @@
 version: 1.0
 shards:
+  ameba:
+    github: veelenga/ameba
+    version: 0.5.0
+
   blank:
     github: kostya/blank
     commit: 9106c23080fb08f271dcd00d4de75fd6481a1de6
