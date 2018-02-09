@@ -1,6 +1,5 @@
 class Lists::Show < BrowserAction
   action do
-    text "show"
-    # render IndexPage, lists: ListQuery.new
+    render ShowPage, list: ListQuery.new.first
   end
 end
