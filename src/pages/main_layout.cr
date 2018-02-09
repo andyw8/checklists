@@ -27,7 +27,10 @@ abstract class MainLayout
         inner
 
         div do
-          link "Home", to: Items::Index
+          raw "<hr/>"
+          link "Items", to: Items::Index
+          text " | "
+          link "Lists", to: Lists::Index
         end
       end
     end
