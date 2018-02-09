@@ -7,12 +7,11 @@ class Lists::IndexPage < MainLayout
     ul do
       @lists.each do |list|
         link to: Lists::Show.with(list.id) do
-          li list.title
+          li list.title + " - #{list.items.count} item(s))"
         end
       end
     end
 
     link "New list", to: Lists::New
-
   end
 end
