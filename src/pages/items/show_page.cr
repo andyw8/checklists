@@ -2,7 +2,7 @@ class Items::ShowPage < MainLayout
   needs item : Item
 
   def inner
-    h1 @item.name
+    h1 @item.name + "(#{@item.list_id})"
 
     para do
       link "Edit item", to: Items::Edit.route(@item)
