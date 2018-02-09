@@ -37,6 +37,6 @@ abstract class MainLayout
   end
 
   def page_title
-    "Welcome to Lucky"
+    "Checklists App"
   end
 end
