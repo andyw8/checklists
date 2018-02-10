@@ -4,6 +4,10 @@ class Items::ShowPage < MainLayout
   def inner
     h1 @item.name + "(#{@item.list_id})"
 
+    if @item.list
+      para "List: #{@item.list.title}"
+    end
+
     para do
       link "Edit item", to: Items::Edit.route(@item)
     end

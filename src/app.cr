@@ -1,6 +1,11 @@
 require "./dependencies"
+require "./serializers/**"
 require "./models/base_model"
 require "./models/mixins/**"
+
+# I need to require list before item, otherwise
+# compilation fails with "undefined constant list"
+require "./models/list"
 require "./models/**"
 require "./queries/mixins/**"
 require "./queries/**"

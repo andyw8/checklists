@@ -4,7 +4,7 @@ class Lists::ShowPage < MainLayout
   def inner
     h1 "List"
 
-    para "#{@list.items.count} item(s)"
+    para "#{@list.items.size} item(s)"
 
     ul do
       @list.items.each do |item|

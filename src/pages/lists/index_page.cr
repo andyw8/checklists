@@ -7,7 +7,7 @@ class Lists::IndexPage < MainLayout
     ul do
       @lists.each do |list|
         link to: Lists::Show.with(list.id) do
-          li list.title + " - #{list.items.count} item(s))"
+          li list.title + " - #{list.items.size} item(s))"
         end
       end
     end
