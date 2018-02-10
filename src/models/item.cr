@@ -3,6 +3,5 @@ class Item < BaseModel
 
   table :items do
     field name : String
-    # field list_id : Int32?
   end
 end
