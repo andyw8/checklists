@@ -1,11 +1,15 @@
 Lucky::Server.configure do
   if Lucky::Env.production?
     settings.secret_key_base = secret_key_from_env
+    settings.host = "0.0.0.0"
+    settings.port = ENV["PORT"].to_i
   else
-    settings.secret_key_base = "gufH1LZ0SQp6fiupxnqQCCeyd4w/h6CSGjo0nUY8+ME="
+    settings.secret_key_base = "<%= secret_key_base %>"
+    # Change host/port in config/watch.yml
+    # Alternatively, you can set the PORT env to set the port
+    settings.host = Lucky::ServerSettings.host
+    settings.port = Lucky::ServerSettings.port
   end
-  settings.host = "0.0.0.0"
-  settings.port = (ENV["PORT"]? || 8080).to_i
 end
 
 private def secret_key_from_env

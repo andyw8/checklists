@@ -2,6 +2,6 @@ class List < BaseModel
   has_many items : Item
 
   table :lists do
-    field title : String
+    column title : String
   end
 end
